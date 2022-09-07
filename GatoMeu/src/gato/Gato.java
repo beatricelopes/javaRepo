@@ -8,6 +8,18 @@ package gato;
  *
  * @author bea
  */
+
+/**
+*Em um editor de texto, cole uma figura de um objeto qualquer.
+*Defina atributos e métodos para o objeto representado
+*Construa a classe referente ao objeto anterior
+*A classe deve ter construtor, métodos de acesso
+*Implemente uma classe  do tipo interface gráfica para coletar os dados referentes ao objeto
+*Instancie objetos de cada classe principal
+*Grave dados dos objetos instaciados em um arquivo csv
+*Entregue via GitHub.  Poste o link de seu gitHub aqui. ApreSsentação em aula.
+**/
+
 public class Gato {
     //atributos
     private char sexo;
@@ -17,17 +29,6 @@ public class Gato {
     private String nome;
  
 //construtor
-    public Gato (String cor, String nome){
-        cor=cor;
-        this.nome=nome;
-    }
-    public Gato (String nome, char Sexo){
-	this.nome=nome;    
-	sexo=Sexo;
-    }
-    public Gato(){
-    }
-   
     //getters e setters
     public String getCor(){
         return cor;
@@ -48,7 +49,7 @@ public class Gato {
 	return peso;
     }
     public void setPeso(float massa){
-	this.peso = peso;
+	this.peso = massa;
     }
 	
     public String getNome(){
@@ -64,4 +65,8 @@ public class Gato {
     public void ouvir()           {}
     public boolean ronronar()     {return true;}
     public void comer(String oque){}
+
+    void setCor(String text) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

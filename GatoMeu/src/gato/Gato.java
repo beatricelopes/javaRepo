@@ -29,8 +29,20 @@ public class Gato {
     private String nome;
  
 //construtor
+    public Gato(char sexo, float altura, float peso, String cor, String nome){    
+        this.sexo = sexo;
+        this.altura = altura;
+        this.peso = peso;
+        this.cor = cor;
+        this.nome = nome;
+    }
+
+    Gato() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     //getters e setters
-    public String getCor(){
+    public String getCor() {
         return cor;
     }
     public char getSexo(){
@@ -58,13 +70,6 @@ public class Gato {
     public void setNome(String nome) {
 	this.nome = nome;
     }
-
-    //métodos da classe
-    public void andar(int passos) {System.out.println("Andei "+ passos+ " passos");}
-    public void miar(String oque) {System.out.println("Miado:  " + oque);}
-    public void ouvir()           {}
-    public boolean ronronar()     {return true;}
-    public void comer(String oque){}
 
     void setCor(String text) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody

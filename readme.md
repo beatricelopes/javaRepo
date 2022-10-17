@@ -23,7 +23,7 @@
 - Gravar a aplicação como runnable .jar 
 </p>
 
-<h1 align="center">O prjeto</h1>
+<h1 align="center">O projeto</h1>
 <p align="justify">Me baseando no objeto escolhido nas primeiras aulas - um gato - decidi fazer um programa de cadastro para um hotel de gatinhos, onde os funcionários podem fazer o registro de cada gato que foi hospedado.</p>
 <h2 align="center">Wireframe</h2>
 <div text align="center">

@@ -27,5 +27,5 @@
 <p align="justify">Me baseando no objeto escolhido nas primeiras aulas - um gato - decidi fazer um programa de cadastro para um hotel de gatinhos, onde os funcionários podem fazer o registro de cada gato que foi hospedado.</p>
 <h2 align="center">Wireframe</h2>
 <div text align="center">
-<img src="image/wireframe.png"  width="387" height="227" />
+<img src="https://raw.githubusercontent.com/beatricelopes/java_repo/master/image/wireframe.PNG"  width="487" height="327" />
 </div><br>

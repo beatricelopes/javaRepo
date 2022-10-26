@@ -10,25 +10,34 @@ package classe;
  */
 public class Gato {
     //atributos
-    private char sexo;
-    private float altura;
-    private float peso;
-    private String cor;
-    private String nome;
+    protected String sexo;
+    protected float altura;
+    protected float peso;
+    protected String cor;
+    protected String nome;  
+    protected String dono;
     
-    public Gato(char sexo, float altura, float peso, String cor, String nome) {
-        this.sexo = sexo;
-        this.altura = altura;
-        this.peso = peso;
-        this.cor = cor;
-        this.nome = nome;
+    public Gato() {
+		
+	}
+
+
+    public Gato(String sexo, float altura, float peso, String cor, String nome) {
+		super();
+		this.sexo = sexo;
+		this.altura = altura;
+		this.peso = peso;
+		this.cor = cor;
+		this.nome = nome;
+		
     }
 
-    public char getSexo() {
+
+	public String getSexo() {
         return sexo;
     }
 
-    public void setSexo(char sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
 
@@ -63,5 +72,15 @@ public class Gato {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+
+	@Override
+	public String toString() {
+		return "Gato [sexo=" + sexo + ", altura=" + altura + ", peso=" + peso + ", cor=" + cor + ", nome=" + nome + "]";
+	}
+    
+    
+    
+    
 
 }

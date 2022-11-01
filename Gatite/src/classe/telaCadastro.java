@@ -1,5 +1,4 @@
 package classe;
-
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
@@ -14,10 +13,9 @@ import java.awt.Font;
 
 @SuppressWarnings("serial")
 public class telaCadastro extends javax.swing.JFrame {
-
+private Teste gati = new Teste();
 	
 	 public class AplicaNimbusLookAndFeel {
-
 	    	private AplicaNimbusLookAndFeel() {
 
 	    	}
@@ -176,10 +174,7 @@ public class telaCadastro extends javax.swing.JFrame {
     }
 
     private void btnOkActionPerformed(java.awt.event.ActionEvent evt) {
-      
-    	
-       
-        Teste gato = new Teste();
+        Gato gato = new Gato();
         gato.setSexo(comGato.getSelectedItem().toString());
         gato.setAltura(Float.parseFloat(txtAltura.getText()));
         gato.setPeso(Float.parseFloat(txtPeso.getText()));
@@ -187,6 +182,13 @@ public class telaCadastro extends javax.swing.JFrame {
         gato.setNome(txtNome.getText());
         System.out.println(gato);
         
+        gati.gati.add(gato); //add array
+        gati.gatos.add(gato); //add hashset
+        gati.mapaGato.put(gato.getNome(), gato); //add hashmap
+        
+//        for (Object g: gati.mapaGato.entrySet()) {
+//        	System.out.println(g);
+//        }
     }
     	
 

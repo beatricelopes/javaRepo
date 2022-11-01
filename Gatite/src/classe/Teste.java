@@ -1,27 +1,18 @@
 package classe;
-//import java.util.HashSet;
-import java.util.ArrayList; 
+import java.util.HashSet;
+import java.util.Map;
+import java.util.ArrayList;
+import java.util.HashMap; 
 
-public class Teste extends Gato{
 
+public class Teste{
 	
-			public static void main(String[] args) {
+				ArrayList<Gato> gati = new ArrayList<Gato>();
+				HashSet<Gato> gatos = new HashSet<Gato>();
+				Map mapaGato = new HashMap();
 				
 				
-				ArrayList<Gato> gatos = new ArrayList<Gato>();
-				
-				
-				gatos.add(new Gato("", 0, 0, "", ""));
-				System.out.println(gatos);
-								
-			}		
-		}
-		
-//HashSet<Gato> gatos = new HashSet<Gato>();
-//HashMap		
-	
-		
-	
+}
 	
 	
 	

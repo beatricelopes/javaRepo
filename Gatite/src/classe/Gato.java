@@ -15,13 +15,12 @@ public class Gato {
     protected float peso;
     protected String cor;
     protected String nome;  
-    protected String dono;
-    
+
     public Gato() {
 		
 	}
 
-
+    
     public Gato(String sexo, float altura, float peso, String cor, String nome) {
 		super();
 		this.sexo = sexo;

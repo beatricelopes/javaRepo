@@ -9,13 +9,16 @@ import java.awt.Color;
 import javax.swing.JTextPane;
 import javax.swing.JLabel;
 import java.awt.Font;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 
 @SuppressWarnings("serial")
 public class telaCadastro extends javax.swing.JFrame {
-private Teste gati = new Teste();
+private Database gati = new Database();
 	
-	 public class AplicaNimbusLookAndFeel {
+ 	public class AplicaNimbusLookAndFeel {
 	    	private AplicaNimbusLookAndFeel() {
 
 	    	}
@@ -50,8 +53,6 @@ private Teste gati = new Teste();
 	    	}
 	    }
 	
-	 
-	
     public telaCadastro() {
     	setTitle("Cadastre seu gato");
     	setResizable(false);
@@ -60,10 +61,6 @@ private Teste gati = new Teste();
         initComponents();
     }
     
-    
-   
-		
-
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -77,7 +74,7 @@ private Teste gati = new Teste();
         jLabel5 = new javax.swing.JLabel();
         jLabel5.setBounds(360, 224, 43, 17);
         btnOk = new javax.swing.JButton();
-        btnOk.setBounds(405, 298, 83, 23);
+        btnOk.setBounds(414, 264, 56, 23);
         txtNome = new javax.swing.JTextField();
         txtNome.setBounds(431, 93, 79, 19);
         txtAltura = new javax.swing.JTextField();
@@ -169,6 +166,17 @@ private Teste gati = new Teste();
         lblKg.setFont(new Font("Arial", Font.PLAIN, 14));
         lblKg.setBounds(478, 153, 43, 17);
         getContentPane().add(lblKg);
+        
+        JButton btnExibir = new JButton();
+        btnExibir.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		btnExibirActionPerformed(e);
+        	}
+        });
+        btnExibir.setText("Exibir");
+        btnExibir.setFont(new Font("Arial", Font.PLAIN, 14));
+        btnExibir.setBounds(387, 316, 111, 23);
+        getContentPane().add(btnExibir);
 
         pack();
     }
@@ -182,21 +190,37 @@ private Teste gati = new Teste();
         gato.setNome(txtNome.getText());
         System.out.println(gato);
         
-        gati.gati.add(gato); //add array
-        gati.gatos.add(gato); //add hashset
+        gati.arrayGato.add(gato); //add array
+        gati.hashGato.add(gato); //add hashset
         gati.mapaGato.put(gato.getNome(), gato); //add hashmap
         
-//        for (Object g: gati.mapaGato.entrySet()) {
-//        	System.out.println(g);
-//        }
+        //painel de exibição de sucesso, caso erro/null ele exibe uma janela de erro padrão 
+        JOptionPane.showMessageDialog(null, "Gatinho cadastro com sucesso.");
+
+        clearForm();  //limpar os textos após cada cadastro, da o set para valor vazio ""
     }
     	
-
-    
-    
-    public static void main(String args[]) {
-      
+    private void btnExibirActionPerformed(java.awt.event.ActionEvent evt) {
+    	String message = "";  //inicialização da variavel que vou concatenar as mensagens
     	
+    	for (Object g: gati.mapaGato.entrySet()) {  //para cada coisa adc a mapaGato vamos ter uma variavel g que a representa 
+    		message += g.toString();  //OBS: toString() retorna os valores dos gatinhos, ele sobrescreveu o metodo toString()
+    								  //e toma o funcionamento para o que você seta para a classe 
+    		message += "\n";  //concatenando os valores do gati e quebrando a linha
+    	}
+    	
+    	JOptionPane.showMessageDialog(null, message);   //mostra a mensagem concatenada de todos os gatinhos adicionados ao mapaGato
+    }   
+    
+    private void clearForm() {
+    	 txtNome.setText("");
+         txtCor.setText("");
+         txtAltura.setText("");
+         txtPeso.setText("");
+         comGato.setSelectedIndex(-1);
+    }
+    	
+    public static void main(String args[]) {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {

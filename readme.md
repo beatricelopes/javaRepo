@@ -34,10 +34,7 @@
 </p></details>
 <p align="left">Na segunda parte realizei o aprimoramento da interface. Os dados do gato foram armazenados em um arrayList e usei o HashMap para fazer um identificador para o gato (que no momento está setado como nome do gato, pretendo mudar em breve e setar em um ID para assim conseguir cadastrar dois gatos com o mesmo nome). Um botão de exibição foi colocado para que eu pudesse ver as informações dos gatos cadastrados. 
 
-<table align="center">
-<tr>
-<td><img src="image/screenshot1.PNG"  width="487" height="327" />
-<td>
+<div align="center">
 <img src="image/gif1.gif"  width="487" height="327" />
-</table>
+</div>
 

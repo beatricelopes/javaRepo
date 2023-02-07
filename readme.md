@@ -41,15 +41,3 @@
           <img src="image/gif1.gif"  width="487" height="327" />
           <p align="center">Sistema em funcionamento</p>
 </div>
-<details>
-     <summary>Ver mais prints</summary>
-<div align="center">
-     <figure>
-          <img src="image/sucesso.png">
-          <figcaption>Mensagem exibida caso sucesso no cadastro</figcaption>
-</div>
-<div align="center">
-     <figure>
-          <img src="image/lista_gatis.png">
-          <figcaption>Lista gerada com os dados dos gatos e identificador nome</figcaption>
-</details>

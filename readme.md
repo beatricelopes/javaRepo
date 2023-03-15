@@ -1,43 +1,26 @@
-<p align="right">
-     <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white"/>
-     <img src="https://img.shields.io/badge/Eclipse-FE7A16.svg?style=for-the-badge&logo=Eclipse&logoColor=white"/>
-</p>
-<h2 align="right">Atividades LP I</h2>
-<h1 align="center">O projeto</h1>
-<p align="justify">Me baseando no objeto escolhido nas primeiras aulas - um gato - decidi fazer um programa de cadastro para um hotel de gatinhos, onde os funcionários podem fazer o registro de cada gato que foi hospedado.</p>
+<h2>Atividade 2</h2>
+Desenvolver um projeto Java que atenda a implementação proposta no enunciado abaixo, contemplando:
 
-<p align="left">
-     <h3>Parte I</h3>
-          <details>
-               <summary>Exercícios</summary>
-- Escolha de um objeto qualquer<br>
-- Definir atributos e métodos para o objeto representado<br>
-- Construir a classe referente ao objeto anterior<br>
-- A classe deve ter construtor e métodos de acesso<br>
-- Implementar uma classe  do tipo interface gráfica para coletar os dados referentes ao objeto<br>
-- Instanciar objetos de cada classe principal<br>
-- Gravar os dados dos objetos instaciados em um arquivo csv<br>
-</p></details>
-<p align="left">Na primeira parte da atividade criamos um objeto e colocamos nele 5 atributos, criamos gets e sets para cada um deles e foi criada uma tela simples para que o usuário pudesse cadastrar cada informação do objeto em seus devidos atributos. Os dados foram salvos em um arquivo .csv </p>
-<h3 align="center">Wireframe na primeira versão</h3>
-<div text align="center">
-     <img src="https://raw.githubusercontent.com/beatricelopes/java_repo/master/image/wireframe.PNG"  width="487" height="327" />
-</div><br>
-<h3>Parte II</h3>
-<details>
-     <summary>Exercícios</summary>
-- Construir classes que determinem:<br>
-1. Uma coleção de objetos instaciados, armazenados em ArrayList<br>
-2. Um conjunto para guardar identificadores únicos desses objetos em HashSet<br>
-3. Um dicionário que associe uma chave/valor referente aos objetos<br>
-- Classes devem ter construtor, métodos de acesso, métodos e atributos de classe<br>
-- Objetos de cada classe devem ser instanciados<br>
-- Deve existir um formulário para a entrada de dados para a instanciação de objetos de cada classe<br>
-- Gravar a aplicação como runnable .jar 
-</p></details>
-<p align="left">Na segunda parte realizei o aprimoramento da interface. Os dados do gato foram armazenados em um arrayList e usei o HashMap para fazer um identificador para o gato (que no momento está setado como nome do gato, pretendo mudar em breve e setar em um ID para assim conseguir cadastrar dois gatos com o mesmo nome). Um botão de exibição foi colocado para que eu pudesse ver as informações dos gatos cadastrados. 
+- Projeto Java com as devidas estruturas de pacotes para sua organização,
+- Uso dos convencionamentos básicos para programação com a Linguagem Java, e
+- Source Folder  (src) com o Código Fonte do Projeto.
 
-<div align="center">
-          <img src="image/gif1.gif"  width="487" height="327" />
-          <p align="center">Sistema em funcionamento</p>
-</div>
+Pretendemos armazenar os dados de todos os alunos da turma de Linguagem de Programação II, cujos registros deverão conter a matricula, nome, curso e nota das 4 provas realizadas durante o semestre pelo aluno. Cada prova possui nota e peso! 
+Desenvolver um programa para armazenar os dados de uma turma de alunos com os campos acima citados, onde a quantidade de alunos deverá ser determinada na instanciação do objeto criado, contendo as seguintes operações:
+
+- Incluir Aluno à Turma (até o máximo de alunos delimitado para a turma);
+- Alterar os dados de um Aluno já registrado;
+- Consultar por Nome; 
+- Consultar por Matricula;
+- Excluir um aluno existente na Lista com base no seu Nome;
+- Imprimir a lista de alunos na sua ordem de inserção; e
+- Validar se um aluno com matrícula informada já foi inserido. Caso já tenha sido inserido, a operação não deve ser realizada e um valor lógico (False) deve ser retornado, caso contrário a inserção deve ocorrer normalmente e o valor lógico (True) retornado.
+
+Observação:<br>
+- Atividade <b>INDIVIDUAL</b>;
+- Referência básica: Introdução à Programação Orientada a Objetos - JAVA - Autor: Rafael Santos
+- Leitura ou consulta - Capítulos 1, 2, 3, 4, 5, 6, 7 e 10;
+- Toda a lógica deve ser implementada em Classes com suas devidas responsabilidades;
+- Deverá ser entregue apenas um único projeto Eclipse no formato Archive File (.ZIP) - Vide instruções no tutorial da primeira semana (Moodle);
+- Para implementar o conjunto de Alunos e Provas em suas respectivas classe deverá ser usado Array (Capítulo 10 da referência básica citada acima); e
+- Deverá ser entregues 1 único arquivo .ZIP através desta atividade no Moodle até o dia 18/03/2023 às 23 hrs.

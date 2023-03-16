@@ -1,8 +1,8 @@
 package src;
 
 public class Prova {
-	protected double Nota;
-	protected double Peso;
+	public double Nota;
+	public double Peso;
 	
 	public Prova(double nota, double peso) {
 		super();

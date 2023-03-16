@@ -1,13 +1,13 @@
 package src;
 
 public class Aluno {
-	protected String nome;
-	protected String curso;
-	protected String matricula;
-	protected double notaP1;
-	protected double notaP2;
-	protected double notaP3;
-	protected double notaP4;
+	public String nome;
+	public String curso;
+	public String matricula;
+	public double notaP1;
+	public double notaP2;
+	public double notaP3;
+	public double notaP4;
 	
 	
 	public Aluno() {

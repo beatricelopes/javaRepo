@@ -1,13 +1,14 @@
 package src;
 
 public class Aluno {
-	public String nome;
-	public String curso;
-	public String matricula;
-	public double notaP1;
-	public double notaP2;
-	public double notaP3;
-	public double notaP4;
+	private String nome;
+	private String curso;
+	private String matricula;
+	private double notaP1;
+	private double notaP2;
+	private double notaP3;
+	private double notaP4;
+	private int posicao;
 	
 	
 	public Aluno() {
@@ -68,6 +69,15 @@ public class Aluno {
 	public void setNotaP4(double notaP4) {
 		this.notaP4 = notaP4;
 	}
+
+	public int getPosicao() {
+		return posicao;
+	}
+
+	public void setPosicao(int posicao) {
+		this.posicao = posicao;
+	}
+	
 }
 
 

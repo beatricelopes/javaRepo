@@ -4,10 +4,10 @@ public class Aluno {
 	private String nome;
 	private String curso;
 	private String matricula;
-	private double notaP1;
-	private double notaP2;
-	private double notaP3;
-	private double notaP4;
+	private Prova notaP1;
+	private Prova notaP2;
+	private Prova notaP3;
+	private Prova notaP4;
 	private int posicao;
 	
 	
@@ -15,8 +15,7 @@ public class Aluno {
 		
 	}
 	
-	public Aluno(String nome, String curso, String matricula, double notaP1, double notaP2, double notaP3,
-			double notaP4) {
+	public Aluno(String nome, String curso, String matricula, Prova notaP1, Prova notaP2, Prova notaP3, Prova notaP4) {
 		super();
 		this.nome = nome;
 		this.curso = curso;
@@ -25,7 +24,7 @@ public class Aluno {
 		this.notaP2 = notaP2;
 		this.notaP3 = notaP3;
 		this.notaP4 = notaP4; 
-		}
+	}
 	
 	public String getNome() {
 		return nome;
@@ -45,28 +44,28 @@ public class Aluno {
 	public void setMatricula(String matricula) {
 		this.matricula = matricula;
 	}
-	public double getNotaP1() {
+	public Prova getNotaP1() {
 		return notaP1;
 	}
-	public void setNotaP1(double notaP1) {
+	public void setNotaP1(Prova notaP1) {
 		this.notaP1 = notaP1;
 	}
-	public double getNotaP2() {
+	public Prova getNotaP2() {
 		return notaP2;
 	}
-	public void setNotaP2(double notaP2) {
+	public void setNotaP2(Prova notaP2) {
 		this.notaP2 = notaP2;
 	}
-	public double getNotaP3() {
+	public Prova getNotaP3() {
 		return notaP3;
 	}
-	public void setNotaP3(double notaP3) {
+	public void setNotaP3(Prova notaP3) {
 		this.notaP3 = notaP3;
 	}
-	public double getNotaP4() {
+	public Prova getNotaP4() {
 		return notaP4;
 	}
-	public void setNotaP4(double notaP4) {
+	public void setNotaP4(Prova notaP4) {
 		this.notaP4 = notaP4;
 	}
 

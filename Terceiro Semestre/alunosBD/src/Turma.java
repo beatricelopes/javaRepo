@@ -1,7 +1,5 @@
 package src;
 
-import java.awt.dnd.DropTarget;
-
 public class Turma{
 //adicionar aluno em turma
 	public Aluno[] alunos = new Aluno[30];
@@ -24,7 +22,7 @@ public class Turma{
 //consultar aluno em turma por matricula
 	public Aluno buscarMatricula(String matricula) {
 		for (int i=0; i<alunos.length; i++) {
-			if (alunos[i].getMatricula() == matricula) {
+			if (alunos[i] != null && alunos[i].getMatricula().equals(matricula)) {
 				return alunos[i];
 			}
 		}
@@ -34,7 +32,7 @@ public class Turma{
 //consultar aluno em turma por nome 
 	public Aluno buscarNome(String nome) {
 		for (int i=0; i<alunos.length; i++) {
-			if (alunos[i].getNome() == nome) {
+			if (alunos[i] != null && alunos[i].getNome().equals(nome)) {
 				return alunos[i];
 			}
 		}
@@ -44,14 +42,26 @@ public class Turma{
 //imprimir lista de alunos
 	public void imprimirAluno(){
 		for(int i=0; i<alunos.length; i++) {
-			System.out.println(alunos[i].getNome());
-			System.out.println(alunos[i].getCurso());
-			System.out.println(alunos[i].getMatricula());
-			System.out.println(alunos[i].getNotaP1());
-			System.out.println(alunos[i].getNotaP2());
-			System.out.println(alunos[i].getNotaP3());
-			System.out.println(alunos[i].getNotaP4());
+			var aluno = alunos[i];
+
+			if(aluno != null){
+				mostrarDadosAluno(aluno);	
+			}
 		}
+	}
+
+	public void mostrarDadosAluno(Aluno aluno) {
+		System.out.println("Nome: " + aluno.getNome());
+		System.out.println("Curso: " + aluno.getCurso());
+		System.out.println("Matricula: " + aluno.getMatricula());
+		System.out.println("Nota 1: " + aluno.getNotaP1().getNota());
+		System.out.println("Peso 1: " + aluno.getNotaP1().getPeso());
+		System.out.println("Nota 2: " + aluno.getNotaP2().getNota());
+		System.out.println("Peso 2: " + aluno.getNotaP2().getPeso());
+		System.out.println("Nota 3: " + aluno.getNotaP3().getNota());
+		System.out.println("Peso 3: " + aluno.getNotaP3().getPeso());
+		System.out.println("Nota 4: " + aluno.getNotaP4().getNota());
+		System.out.println("Peso 4: " + aluno.getNotaP4().getPeso());
 	}
 	
 //excluir aluno
@@ -70,12 +80,12 @@ public class Turma{
 		}
 		return true;
 	}
+	
 //alterar dados de um aluno já registrado
-	public void alterarDados(String matricula) {
+	public void alterarDados(String matricula, Aluno novoAluno) {
 		var dados = buscarMatricula(matricula);
 		if (dados != null) {
-			Aluno[] alunos = new Aluno[]();
+			alunos[dados.getPosicao()] = novoAluno;
 		}
-		
-	}
+	} 
 }
